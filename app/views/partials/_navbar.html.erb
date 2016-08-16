@@ -26,14 +26,12 @@
               <ul class="dropdown-menu">
 
                 <li>
-                  <%= form_tag("/users/sign_in", method: "post") do %>
+                  <%= form_for :user, :url => url_for(:controller => 'users/sessions', :action => 'create') do %>
                     <%= label_tag(:email, "Email:") %>
                     <%= text_field_tag(:email) %>
-
                     <%= label_tag(:password, "Password:") %>
                     <%= password_field_tag(:password) %>
-
-                    <%= submit_tag("Sign In") %>
+                    <%= submit_tag("Search") %>
                   <% end %>
                 </li>
                
