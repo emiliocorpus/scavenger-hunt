@@ -15,6 +15,7 @@ gem 'oauth2'
 gem 'rails_12factor'
 gem 'nokogiri', '~> 1.6.7.1'
 gem 'turbolinks'
+gem 'react-rails'
 
 
 group :development, :test do
