@@ -16,7 +16,12 @@
   
 
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Link</a></li>
+
+        <% if current_user %>
+          <li><a href="#"><%= 'Welcome back,' + current_user.first_name %></a></li>
+        <% else %>
+          <li><a href="#">Signout</a></li>
+        <% end %>
 
       </ul>
     </div><!-- /.navbar-collapse -->
