@@ -15,8 +15,10 @@ gem 'sass-rails', '~> 5.0'
 gem 'oauth2'
 gem 'rails_12factor'
 gem 'nokogiri', '~> 1.6.7.1'
-gem 'turbolinks'
 gem 'react-rails'
+gem 'jquery-rails'
+gem 'jquery-turbolinks'
+gem 'turbolinks'
 
 
 group :development, :test do
