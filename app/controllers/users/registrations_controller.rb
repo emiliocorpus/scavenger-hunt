@@ -3,14 +3,15 @@ class Users::RegistrationsController < Devise::RegistrationsController
 # before_action :configure_account_update_params, only: [:update]
 
   # GET /resource/sign_up
-  # def new
-  #   super
-  # end
+  def new
+    @user = User.new
+    binding.pry
+  end
 
   # POST /resource
-  # def create
-  #   super
-  # end
+  def create
+    binding.pry
+  end
 
   # GET /resource/edit
   # def edit
