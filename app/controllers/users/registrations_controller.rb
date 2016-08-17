@@ -8,9 +8,22 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # end
 
   # POST /resource
-  # def create
-  #   super
-  # end
+  def create
+    new_user = User.new(
+                      first_name: params["user"]["first_name"], 
+                      last_name: params["user"]["last_name"], 
+                      email: params["user"]["email"], 
+                      password: params["user"]["password"]
+              )
+    if params["user"]["password"] == params["user"]["password_confirmation"] && new_user.save
+      redirect_to root_path
+    else
+      binding.pry
+      redirect_to new_user_registration_path
+    end
+
+
+  end
 
   # GET /resource/edit
   # def edit
@@ -57,4 +70,15 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # def after_inactive_sign_up_path_for(resource)
   #   super(resource)
   # end
+
+  private
+
+
+
+
+
+
+
+
+
 end
