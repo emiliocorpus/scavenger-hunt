@@ -3,7 +3,6 @@ class Users::SessionsController < Devise::SessionsController
 
   # POST /resource/sign_in
   def create
-    binding.pry
     user = User.find_by_email(params['email'])
     if user
       if user.password == params["password"]

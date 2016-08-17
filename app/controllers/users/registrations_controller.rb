@@ -5,12 +5,12 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # GET /resource/sign_up
   def new
     @user = User.new
-    binding.pry
   end
 
   # POST /resource
   def create
     binding.pry
+    redirect_to root_path
   end
 
   # GET /resource/edit
